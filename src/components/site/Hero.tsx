@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png.asset.json";
 import { empresa } from "@/data/tabela";
 
@@ -36,13 +37,37 @@ export function Hero() {
       />
 
       <motion.p
-        className="relative mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+        className="relative mx-auto mt-5 max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg"
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.5 }}
       >
         {empresa.subtitulo}
       </motion.p>
+
+      <motion.p
+        className="relative mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.6 }}
+      >
+        {empresa.apresentacao}
+      </motion.p>
+
+      <motion.a
+        href={empresa.whatsapp}
+        target="_blank"
+        rel="noreferrer"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 0.97 }}
+        className="relative mt-8 inline-flex items-center justify-center gap-3 rounded-full bg-[image:var(--gradient-neon)] px-8 py-4 text-base font-bold uppercase tracking-wide text-primary-foreground shadow-[0_18px_40px_-14px_rgba(0,0,0,0.85)] ring-1 ring-white/25 sm:text-lg"
+      >
+        <MessageCircle className="size-5" />
+        Solicitar orçamento
+      </motion.a>
     </header>
   );
 }

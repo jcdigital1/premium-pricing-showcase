@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { Categorias } from "@/components/site/Categorias";
+import { Premium } from "@/components/site/Premium";
+import { Diferenciais } from "@/components/site/Diferenciais";
 import { Cta } from "@/components/site/Cta";
 import { Footer } from "@/components/site/Footer";
+import { FloatingWhatsapp } from "@/components/site/FloatingWhatsapp";
 
 const title = "Tabela de Preços | Studio Lava e Brilho";
 const description =
@@ -29,9 +32,12 @@ function Index() {
       <div className="relative mx-auto max-w-7xl">
         <Hero />
         <Categorias />
+        <Premium />
+        <Diferenciais />
         <Cta />
         <Footer />
       </div>
+      <FloatingWhatsapp />
     </main>
   );
 }
