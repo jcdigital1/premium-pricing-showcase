@@ -1,24 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/site/Hero";
+import { Categorias } from "@/components/site/Categorias";
+import { Servicos } from "@/components/site/Servicos";
+import { Diferenciais } from "@/components/site/Diferenciais";
+import { Cta } from "@/components/site/Cta";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Tabela de Preços | Studio Lava e Brilho";
+const description =
+  "Confira a tabela de preços do Studio Lava e Brilho: lavagem, polimento, vitrificação e higienização automotiva com acabamento premium.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="carbon-bg relative min-h-screen w-full overflow-x-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.22),transparent_60%)]" />
+      <div className="relative mx-auto max-w-7xl">
+        <Hero />
+        <Categorias />
+        <Servicos />
+        <Diferenciais />
+        <Cta />
+        <Footer />
+      </div>
+    </main>
   );
 }
