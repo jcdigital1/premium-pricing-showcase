@@ -1,6 +1,5 @@
 /**
  * TODOS OS TEXTOS E PREÇOS SÃO EDITÁVEIS AQUI.
- * Basta alterar os valores abaixo para atualizar o site.
  */
 
 export const empresa = {
@@ -18,121 +17,59 @@ export const empresa = {
 };
 
 export type Categoria = {
-  icone: "car" | "sparkles" | "droplets" | "shieldCheck" | "wrench" | "bike";
+  icone: "bike" | "bikeBig" | "car" | "truck";
   nome: string;
   itens: { nome: string; preco: string }[];
 };
 
 export const categorias: Categoria[] = [
   {
-    icone: "car",
-    nome: "Lavagem de Carros",
-    itens: [
-      { nome: "Lavagem simples", preco: "R$ 40" },
-      { nome: "Lavagem completa", preco: "R$ 70" },
-      { nome: "Lavagem + cera", preco: "R$ 90" },
-      { nome: "Lavagem técnica detalhada", preco: "R$ 150" },
-    ],
-  },
-  {
     icone: "bike",
-    nome: "Motos",
+    nome: "Motos pequenas e médias",
     itens: [
-      { nome: "Lavagem simples", preco: "R$ 25" },
-      { nome: "Lavagem completa", preco: "R$ 40" },
-      { nome: "Lavagem + polimento", preco: "R$ 80" },
+      { nome: "Lavagem simples + cera", preco: "R$ 40" },
+      { nome: "Revitalização de plásticos", preco: "R$ 15" },
+      { nome: "Vitrificação dos plásticos", preco: "R$ 120" },
+      { nome: "Limpeza detalhada", preco: "R$ 150" },
+      { nome: "Verniz", preco: "R$ 30" },
     ],
   },
   {
-    icone: "sparkles",
-    nome: "Estética Automotiva",
+    icone: "bikeBig",
+    nome: "Motos grandes",
     itens: [
-      { nome: "Polimento comercial", preco: "R$ 250" },
-      { nome: "Polimento técnico", preco: "R$ 450" },
-      { nome: "Cristalização de pintura", preco: "R$ 300" },
-      { nome: "Vitrificação", preco: "R$ 700" },
+      { nome: "Lavagem simples + cera", preco: "R$ 60" },
+      { nome: "Revitalização de plásticos", preco: "R$ 15" },
+      { nome: "Vitrificação dos plásticos", preco: "R$ 150" },
+      { nome: "Limpeza detalhada", preco: "R$ 180" },
+      { nome: "Verniz", preco: "R$ 50" },
     ],
   },
-  {
-    icone: "droplets",
-    nome: "Higienização",
-    itens: [
-      { nome: "Higienização de bancos", preco: "R$ 180" },
-      { nome: "Higienização interna completa", preco: "R$ 300" },
-      { nome: "Higienização de ar-condicionado", preco: "R$ 120" },
-    ],
-  },
-  {
-    icone: "wrench",
-    nome: "Serviços Extras",
-    itens: [
-      { nome: "Lavagem de motor", preco: "R$ 80" },
-      { nome: "Hidratação de couro", preco: "R$ 150" },
-      { nome: "Revitalização de plásticos", preco: "R$ 100" },
-    ],
-  },
-  {
-    icone: "shieldCheck",
-    nome: "Proteção",
-    itens: [
-      { nome: "Impermeabilização de tecidos", preco: "R$ 200" },
-      { nome: "Selante de pintura", preco: "R$ 250" },
-      { nome: "Cristalização de vidros", preco: "R$ 180" },
-    ],
-  },
-];
-
-export type Servico = {
-  icone: "car" | "sparkles" | "droplets" | "shieldCheck" | "wrench" | "wind";
-  nome: string;
-  descricao: string;
-  valor: string;
-};
-
-export const servicos: Servico[] = [
   {
     icone: "car",
-    nome: "Lavagem Completa",
-    descricao: "Lavagem externa, rodas, pneus, vidros e aspiração interna.",
-    valor: "R$ 70",
+    nome: "Carro pequeno",
+    itens: [
+      { nome: "Lavagem simples + cera + aspiração", preco: "R$ 65" },
+      { nome: "Limpeza interna detalhada sem remover os bancos", preco: "R$ 160" },
+      { nome: "Limpeza de teto interno", preco: "R$ 120" },
+      { nome: "Tratamento de banco em couro", preco: "R$ 170" },
+      { nome: "Tratamento de chuva ácida nos vidros", preco: "R$ 90" },
+      { nome: "Lavagem de chassis + verniz", preco: "R$ 200" },
+      { nome: "Lavagem Premium", preco: "R$ 500" },
+    ],
   },
   {
-    icone: "sparkles",
-    nome: "Polimento Técnico",
-    descricao: "Remoção de riscos e microrriscos com brilho profundo de espelho.",
-    valor: "R$ 450",
+    icone: "truck",
+    nome: "Camionete média e grandes",
+    itens: [
+      { nome: "Lavagem simples + cera e aspiração", preco: "R$ 80" },
+      { nome: "Limpeza interna detalhada", preco: "R$ 250" },
+      { nome: "Limpeza de teto", preco: "R$ 170" },
+      { nome: "Tratamento em bancos de couro", preco: "R$ 190" },
+      { nome: "Tratamento de chuva ácida nos vidros", preco: "R$ 100" },
+      { nome: "Lavagem de chassis + verniz", preco: "R$ 300" },
+      { nome: "Lavagem de motor + tratamento", preco: "R$ 390" },
+      { nome: "Lavagem Premium", preco: "R$ 800" },
+    ],
   },
-  {
-    icone: "shieldCheck",
-    nome: "Vitrificação",
-    descricao: "Camada cerâmica com proteção duradoura e efeito hidrofóbico.",
-    valor: "R$ 700",
-  },
-  {
-    icone: "droplets",
-    nome: "Higienização Interna",
-    descricao: "Limpeza profunda de bancos, tapetes, teto e carpetes.",
-    valor: "R$ 300",
-  },
-  {
-    icone: "wind",
-    nome: "Ar-condicionado",
-    descricao: "Higienização com eliminação de fungos, bactérias e odores.",
-    valor: "R$ 120",
-  },
-  {
-    icone: "wrench",
-    nome: "Lavagem de Motor",
-    descricao: "Desengraxe seguro do compartimento com finalização premium.",
-    valor: "R$ 80",
-  },
-];
-
-export const diferenciais = [
-  "Atendimento profissional",
-  "Produtos de alta qualidade",
-  "Equipamentos modernos",
-  "Garantia de qualidade",
-  "Atendimento rápido",
-  "Excelente acabamento",
 ];
