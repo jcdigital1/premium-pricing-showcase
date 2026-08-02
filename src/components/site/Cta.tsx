@@ -19,7 +19,7 @@ export function Cta() {
               Solicite seu orçamento agora mesmo.
             </h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-primary-foreground/85 sm:text-base">
-              Fale com a nossa equipe pelo WhatsApp {empresa.telefone} e agende o seu horário.
+              Fale com a nossa equipe pelo WhatsApp e agende o seu horário.
             </p>
 
             {/* Insira o link do WhatsApp em src/data/tabela.ts (campo whatsapp) */}
