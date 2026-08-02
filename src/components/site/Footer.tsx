@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         <p className="mt-8 text-xs uppercase tracking-[0.25em] text-muted-foreground/70">
-          {empresa.nome} · {empresa.telefone}
+          {empresa.nome}
         </p>
       </Reveal>
     </footer>

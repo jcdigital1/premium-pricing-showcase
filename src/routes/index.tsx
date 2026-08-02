@@ -1,14 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { Categorias } from "@/components/site/Categorias";
-import { Servicos } from "@/components/site/Servicos";
-import { Diferenciais } from "@/components/site/Diferenciais";
 import { Cta } from "@/components/site/Cta";
 import { Footer } from "@/components/site/Footer";
 
 const title = "Tabela de Preços | Studio Lava e Brilho";
 const description =
-  "Confira a tabela de preços do Studio Lava e Brilho: lavagem, polimento, vitrificação e higienização automotiva com acabamento premium.";
+  "Tabela de preços do Studio Lava e Brilho: lavagem, vitrificação, limpeza detalhada e lavagem premium para motos, carros e camionetes.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,8 +29,6 @@ function Index() {
       <div className="relative mx-auto max-w-7xl">
         <Hero />
         <Categorias />
-        <Servicos />
-        <Diferenciais />
         <Cta />
         <Footer />
       </div>
