@@ -16,16 +16,15 @@ export function Cta() {
           />
           <div className="relative">
             <h2 className="text-2xl uppercase text-primary-foreground sm:text-4xl">
-              Solicite seu orçamento agora mesmo.
+              Seu veículo merece um cuidado especial.
             </h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-primary-foreground/85 sm:text-base">
-              Fale com a nossa equipe pelo WhatsApp e agende o seu horário.
+              Entre em contato pelo WhatsApp e solicite seu atendimento.
             </p>
 
-            {/* Insira o link do WhatsApp em src/data/tabela.ts (campo whatsapp) */}
             <motion.a
-              href={empresa.whatsapp || "#"}
-              target={empresa.whatsapp ? "_blank" : undefined}
+              href={empresa.whatsapp}
+              target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
