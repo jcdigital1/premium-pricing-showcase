@@ -206,3 +206,19 @@
 @utility glow-ring {
   box-shadow: 0 0 30px -6px oklch(0.7 0.2 245 / 60%);
 }
+
+/* Borda metálica para os cards premium */
+@utility metal-border {
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(
+      150deg,
+      oklch(1 0 0 / 10%) 0%,
+      oklch(1 0 0 / 3%) 45%,
+      oklch(0.5 0.24 262 / 14%) 100%
+    ),
+    var(--gradient-metal);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: var(--shadow-glow), var(--shadow-deep);
+}
